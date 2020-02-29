@@ -1,8 +1,8 @@
 public class Compra {
-  String produto;
-  String categoria;
-  float preco;
-  int numPedido;
+  private String produto;
+  private String categoria;
+  private float preco;
+  private int numPedido;
 
   public String getProduto() {
     return produto;
