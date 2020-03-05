@@ -54,7 +54,7 @@ public class Conta {
   }
 
   public boolean diminuir(double valor) {
-    if (valor > getSaldo()) {
+    if (valor > saldo) {
       return false;
     }
     saldo -= valor;
@@ -69,7 +69,7 @@ public class Conta {
     if (diminuir(valor)) {
       System.out.println("Voce sacou " + valor);
     } else {
-      System.out.println("Impossivel sacar este valor, voce pode sacar ate " + getSaldo());
+      System.out.println("Impossivel sacar este valor, voce pode sacar ate " + saldo);
     }
   }
 }

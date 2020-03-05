@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
   static ArrayList<Conta> listaDeContas = new ArrayList<Conta>();
+  static int lastId = 1;
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -129,23 +130,7 @@ public class Main {
   }
 
   public static int ultimoNumeroConta() {
-    boolean passou = false;
-    int ultimoId = 0;
-    int id = 0;
-    for (Conta conta :
-      listaDeContas) {
-      passou = true;
-      id = conta.getId();
-      if (id > ultimoId) {
-        ultimoId = id + 1;
-      } else {
-        ultimoId = 1;
-      }
-    }
-    if (!passou) {
-      ultimoId = 1;
-    }
-    return ultimoId;
+    return lastId++;
   }
 
   public static void listarContas() {
