@@ -1,0 +1,5 @@
+O static serve para definir se o atributo é da classe ou do objeto.
+Já nos métodos, a diferença é que se for statico qualquer um consegue chamar, caso não seja static tem que instanciar um objeto.
+
+O método main é static porque senão a JVM teria que criar um objeto e invocar pra conseguir chamar o método main.
+
