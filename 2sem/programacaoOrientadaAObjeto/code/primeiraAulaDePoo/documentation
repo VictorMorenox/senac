@@ -1,0 +1,8 @@
+A função desse sistema é gerenciar os alunos de uma escola de natação. Além de gerenciar com a criação dos usuários, ele também registra o peso ideal do aluno de acordo com uma fórmula:
+
+Para homens:
+Peso ideal = (72.7 * altura) - 58
+Para mulheres:
+Peso ideal = (62.1 * altura) - 44.7
+
+Para cadastrar um aluno é necessário informar o nome, o genero, altura, peso e o ano de nascimento. 
