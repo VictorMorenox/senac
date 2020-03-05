@@ -16,3 +16,17 @@ public class Main {
     return first - second;
   }
 }
+
+/*
+  Codigo aprimorado
+
+    public static int div(int num, int div) {
+      int result = sub(num, div);
+
+      if (result >= div) {
+      result = div(result, div);
+      }
+      return result;
+    }
+
+ */
