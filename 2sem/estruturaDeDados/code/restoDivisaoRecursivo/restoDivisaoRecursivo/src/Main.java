@@ -2,7 +2,6 @@ public class Main {
 
   public static void main(String[] args) {
     System.out.println(div(62, 99));
-    System.out.println(62 % 99);
   }
 
   public static int div(int num, int div) {

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/contaOrientadaObjeto.iml" filepath="$PROJECT_DIR$/contaOrientadaObjeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ContaOrientadaAObjeto.iml" filepath="$PROJECT_DIR$/ContaOrientadaAObjeto.iml" />
     </modules>
   </component>
 </project>
