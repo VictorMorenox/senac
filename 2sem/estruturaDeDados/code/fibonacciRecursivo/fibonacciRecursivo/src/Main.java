@@ -1,10 +1,15 @@
-public class Main {
+  public class Main {
 
     public static void main(String[] args) {
-        fibonacciRecursivo;
+      System.out.println(fibonacciRecursivo(2));
     }
 
-    public static void fibonacciRecursivo(int max) {
-        if (max )
+    public static int fibonacciRecursivo(int num) {
+      if (num == 1 || num == 2) {
+        return 1;
+      } else {
+        return fibonacciRecursivo( num - 1) + fibonacciRecursivo(num - 2);
+      }
     }
-}
+  }
+
