@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f7d9ac9-94f7-490d-ad66-baa54ddc9d3c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YgNYeX2F5rmAP6WVcCwekW5p15" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="OrdenaArray" />
+      <module name="ordenaArray" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f7d9ac9-94f7-490d-ad66-baa54ddc9d3c" name="Default Changelist" comment="" />
+      <created>1583360325884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583360325884</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="839" y="192" width="800" height="672" key="#Project_Structure" timestamp="1583361358956">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="839" y="192" width="800" height="672" key="#Project_Structure/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583361358956" />
+    <state x="804" y="431" width="302" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583361422961">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="804" y="431" width="302" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583361422961" />
+    <state width="1878" height="273" key="GridCell.Tab.0.bottom" timestamp="1583367612513">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="273" key="GridCell.Tab.0.bottom/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583367612513" />
+    <state width="1878" height="273" key="GridCell.Tab.0.center" timestamp="1583367612513">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="273" key="GridCell.Tab.0.center/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583367612513" />
+    <state width="1878" height="273" key="GridCell.Tab.0.left" timestamp="1583367612513">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="273" key="GridCell.Tab.0.left/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583367612513" />
+    <state width="1878" height="273" key="GridCell.Tab.0.right" timestamp="1583367612513">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="273" key="GridCell.Tab.0.right/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583367612513" />
+    <state x="443" y="116" width="1024" height="840" key="SettingsEditor" timestamp="1583364211501">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="443" y="116" width="1024" height="840" key="SettingsEditor/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583364211501" />
+    <state x="376" y="121" width="1157" height="830" key="new project wizard" timestamp="1583367610977">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="376" y="121" width="1157" height="830" key="new project wizard/255.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1583367610977" />
+  </component>
+</project>

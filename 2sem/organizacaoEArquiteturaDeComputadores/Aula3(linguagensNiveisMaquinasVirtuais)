@@ -1,0 +1,37 @@
+Todas as instruções são realizadas no hardware, porém também pode ser simulada no software.
+No hardware são colocadas as instruções mais simples pois são mais rápidas.
+
+Quem decide quantas e quais instruções a arquitetura vai fazer, é o arquiteto do computador.
+Decide também se vai ser rodada no hardware ou simulada no software.
+
+A decisão de se é hardware ou é software tem a influência de custo, velocidade, confiabilidade e frequência esperada de mudança.
+O custo é mais barato no software.
+
+Custo: Software
+Velocidade: Hardware
+Confiabilidade: Software --> porque o Hardware pode quebrar, o software não
+Frequencia esperada de mudança: varia
+
+
+
+Niveis do computador
+
+
+
+
+
+Sistema operacional -> nível 3
+  
+
+Micro Arquitetura -> nível 1
+  Foi sugerido a construção de um computador com três niveis a fim de simplificar o Hardware. Ela teria que ter um interpretador porque a interpretação tem muita portabilidade, então os computadores nesse nível possuem bem menos circuitos integrados.
+  Resumo:
+  Antes do microcódigo era feito com as operações de soma, subtração, multiplicação e divisão (cada uma tinha seu circuito).
+  Somente a adição ficou no hardware depois que essa ideia foi sugerida.
+    Importante: Isso simplificou o desenvolvimento da CPU porque ela tem menos hardware.
+Lógica digital -> nível 0
+
+
+
+Risc -> máquinas sem micro código
+Cisc -> máquinas com micro código
