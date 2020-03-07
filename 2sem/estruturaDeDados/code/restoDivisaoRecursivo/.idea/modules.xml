@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/restoDivisaoRecursivo.iml" filepath="$PROJECT_DIR$/.idea/restoDivisaoRecursivo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restoDivisaoRecursivo.iml" filepath="$PROJECT_DIR$/restoDivisaoRecursivo.iml" />
     </modules>
   </component>
 </project>
