@@ -5,7 +5,6 @@ public class Main {
   static boolean passou = false;
 
   public static void main(String[] args) {
-
-    sc.close();
+    sc.
   }
 }

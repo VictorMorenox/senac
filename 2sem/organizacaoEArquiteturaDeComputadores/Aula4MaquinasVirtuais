@@ -1,0 +1,112 @@
+Evolução no tempo de resposta em nível de processador
+|
+-->   Máquinas do "futuro" porque são as máquinas que conhecemos hoje, ou seja, mais de um núcleo de processamento.
+      
+Os computadores são utilizados em três maneiras
+    Desktop -> é a forma mais conhecida de computação e significam computadores pessoais
+
+    Servidor -> é a forma mais moderna dos antigos *mainframes, minicomputadores e supercomputadores em geral e são acessados através de uma rede
+        *Mainframe = computador de grande porte.
+
+    Computadores embutidos ou embarcado -> incluem os microprocessadores por exemplo uma máquina de lavar, telefone, no avião, etc.
+
+Caracteristica da linguagem interpretada -> se adapata a qualuqer lugar (portabilidade)
+
+Linguagem compilada --> perde o contorle do tamanho do executavel porque ela eh traduzida para várias instruções.
+
+lei de moore = a cada 18 meses os chips vao dobrar de performance e manter o valor (industria produtora de chip)
+    Moore fala sobre hardware. Os ganhos previstos na lei de moore era construir computadores mais poderosos e precos constantes e mais baratos.
+
+
+Processador -> cerebro do computador, serve para executar programas armazenados na memoria principal
+
+
+
+
+
+                CPU ---------------------- MEMORIA ---------------------- I/O
+
+
+A unidade de controle é a parte responsável pela busca das instruoes na memoroa principal pela determinação do tipo de instrução
+Uma arquitetura executa 2 TIPOS de instrução: são eles: lógica e aritmetico.
+
+UAL (Unidade logica aritmetica) realiza um conjunto de operacoes booleanas e soma
+Toda instrução percorre um local que é o caminho de dados (através do barramento)
+
+A unica operação matematica que o computador sabe fazer é a soma, todas as outras são booleanas
+
+A memoria mais rápida que existe no processador são os registradores
+
+QUais são as partes da CPU
+PROVA ***** --->>>>> unidade de controle, unidade logica aritmetica e registrador <<<<<<<<<<<<<<<<<<<<<<<<<< Prova
+dos registradores:
+PC
+    Program Counter - cujo valor apnta para a proxima instrução a ser buscada na memoria para ser executada
+IR
+    Registrador de instruções armazena a instrção que está sendo executadas
+
+
+ARQUITETURAS RISC E SISC
+Quantidade de instruçoes e a qtd de reigstradores é o que muda entre essas duas arquiteturas
+
+
+unidade de controle busca a instruão
+o ual descobre se é interna ou aritmetica
+
+
+Como uma instrução é executada:
+    é buscada e armazenada no registrador IR
+    é atualizado o valor do registrador PC
+    determina o tipo da instrução (logica ou aritmetica)
+    se precisar de uma palavra (palavra é a maior string que um computador consegue enderecar (trabalhar))
+    busca a palavra
+    executa a instrução
+    volta ao passo 1
+
+os arquitetos estão sempre sendo desafiados a melhorar a preformance da maquina fazendo com que os chips rodem cada vez mais rapido, aumentando a velocidade do clock
+o chip rodar mais rápido significa --> 1 MHZ -> 1 milhao de instruções por segundo
+1 GHZ -> 1 bilhão de instruções por segundo
+
+Paralelismo -> rodar mais de uma coisa ao mesmo tempo precisa de mais de uma cpu
+    ELe pode ser implantado de duas maneiras:
+
+o gargalo para a execução das instruções é o acesso a memoria
+
+as instruções eram armazendads em um conjunto de registradores denominados buffer de pre busca (buffer = armazem)
+
+a pre-busca divide a execucao das instruções em duas partes, a busca e a execução.
+
+O conceito de Pipeline (canalização) é feito a divisão em diversas partes (e não duas), cada uma das quais tratadas por um hardware dedicado exclusivamente a ele (os registradores)
+pipeline melhora a velocidade da máquina com uma só CPU
+
+5 estagios
+e1
+    unidade de busca        
+e2
+    unidade de decodificação (traduzir para linguagem de máquina)
+e3
+    unidade de busca operando (se precisar de uma palavra)
+e4
+    unidade de execução de instrução
+e5
+    unidade de escrita
+
+
+clock --> é um "relogio" que a hora que el erecebe o pulso eletrico ele fica pulsando na mesma velocidade, nesse pulso é a medida do tempo que tem pra trocar entre dois componentes
+
+exemplo pratico pra entender como o pipeline ganha escala
+
+ele foi baseado nua linha de produção
+linha de produção -> vai pasasndo uma peca e cada um vai fazendo um pedaco
+ao inves de ser só um cara fazendo, um vai fazendo e passando pra frente, cada um faz a sua parte
+por isso é mais rápido
+
+
+foco da aula de hoje
+conjecutrar as maquinas e as eoluvoces delas
+velocidade e capacidade de processamento
+
+lei de moore e  lei de nata
+
+hardware cada vez mais poderoso e mais barato
+
