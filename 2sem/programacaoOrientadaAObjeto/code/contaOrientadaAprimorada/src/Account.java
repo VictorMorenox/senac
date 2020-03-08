@@ -1,12 +1,12 @@
 public class Account {
-  private double saldoInicial = 0;
+  private final double SALDO_INICIAL = 0;
 
   private int numero;
   private double saldo;
   private String cpf;
 
   public Account(String cpf, int numero) {
-    saldo = saldoInicial;
+    saldo = SALDO_INICIAL;
     this.cpf = cpf;
     this.numero = numero;
   }

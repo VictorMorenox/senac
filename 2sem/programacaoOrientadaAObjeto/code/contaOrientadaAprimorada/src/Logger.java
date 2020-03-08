@@ -1,30 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Logger {
 
-  private int id;
-  private String type;
-  private String status;
-  private String description;
+  private final static List<String> logs = new ArrayList<>();
 
-  public Logger(int id, String type, String status, String description) {
-    this.id = id;
-    this.type = type;
-    this.status = status;
-    this.description = description;
+  public static void info(Class clazz, String logLine) {
+    logs.add("Class: " + clazz.getName() + ": " + logLine);
   }
 
-  public int getId() {
-    return id;
-  }
-
-  public String getType() {
-    return type;
-  }
-
-  public String getStatus() {
-    return status;
-  }
-
-  public String getDescription() {
-    return description;
+  public static void printLog() {
+    for (String log : logs) {
+      System.out.println(log);
+    }
   }
 }

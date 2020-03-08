@@ -18,7 +18,7 @@ public class BankManager {
     System.out.println();
 
     int opcao;
-    do {
+    while (true) {
       System.out.println("Escolha o que deseja fazer nos enviando o numero selecionado ou escreva qualquer outro numero para sair");
       System.out.println("1. Cadastrar um novo cliente;");
       System.out.println("2. Saque;");
@@ -33,7 +33,7 @@ public class BankManager {
         case 1:
           if (bank.register()) {
             System.out.println("Cliente cadastrado com sucesso!");
-            bank.returnEspecificAccount(bank.lastIdCustomer());
+            bank.printAccountInfoById(bank.lastIdCustomer());
             System.out.println();
           } else {
             System.out.println("Deu erro ao cadastrar o cliente, favor tentar novamente mais tarde.");
@@ -41,7 +41,7 @@ public class BankManager {
           break;
         case 2:
           System.out.println("De qual conta voce deseja sacar?");
-          bank.returnAllAccounts();
+          bank.printAllAccounts();
           mainAccount = sc.nextInt();
           System.out.println("Qual o valor?");
           value = sc.nextDouble();
@@ -76,19 +76,19 @@ public class BankManager {
           }
           break;
         case 5:
-          bank.returnAllAccounts();
+          bank.printAllAccounts();
           break;
         case 6:
           System.out.println("Digite o numero da conta para saber os dados: ");
           mainAccount = sc.nextInt();
-          bank.returnEspecificAccount(mainAccount);
+          bank.printAccountInfoById(mainAccount);
           break;
         case 7:
-          bank.returnLog();
+          Logger.printLog();
           break;
         default:
           System.exit(1);
       }
-    } while (true);
+    }
   }
 }
