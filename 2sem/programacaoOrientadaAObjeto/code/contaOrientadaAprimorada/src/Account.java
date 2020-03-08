@@ -12,7 +12,7 @@ public class Account {
   }
 
   public boolean subtract(double value) {
-    if (value < saldo) {
+    if (value <= saldo) {
       saldo -= value;
       return true;
     } else {
