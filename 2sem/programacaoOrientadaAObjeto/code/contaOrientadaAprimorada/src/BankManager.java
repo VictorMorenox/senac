@@ -25,7 +25,8 @@ public class BankManager {
       System.out.println("3. Deposito;");
       System.out.println("4. Transferencia;");
       System.out.println("5. Listar todos os clientes;");
-      System.out.println("6. Listar cliente especifico.");
+      System.out.println("6. Listar cliente especifico;");
+      System.out.println("7. Ver o registro de atividades.");
       opcao = sc.nextInt();
       sc.nextLine();
       switch (opcao) {
@@ -68,8 +69,11 @@ public class BankManager {
           System.out.println("Qual valor?");
           value = sc.nextDouble();
           sc.nextLine();
-          bank.transfer(mainAccount, secondAccount, value);
-          System.out.println("Voce transferiu " + value + " da conta " + mainAccount + " para a conta " + secondAccount);
+          if (bank.transfer(mainAccount, secondAccount, value)) {
+            System.out.println("Voce transferiu " + value + " da conta " + mainAccount + " para a conta " + secondAccount);
+          } else {
+            System.out.println("Saldo insuficiente!");
+          }
           break;
         case 5:
           bank.returnAllAccounts();
@@ -78,6 +82,9 @@ public class BankManager {
           System.out.println("Digite o numero da conta para saber os dados: ");
           mainAccount = sc.nextInt();
           bank.returnEspecificAccount(mainAccount);
+          break;
+        case 7:
+          bank.returnLog();
           break;
         default:
           System.exit(1);
