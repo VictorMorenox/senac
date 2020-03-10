@@ -1,0 +1,20 @@
+Tasks para a Sprint
+
+Problemas vistos pelo cliente:
+	Cada monitor fica diferente, alguns ficam horriveis para ler;
+	Dificil navegação, fico perdido no site;
+	Cores confusas;
+	Animações demoradas;
+	Pouco conteúdo informativo;
+	Falta de objetividade no site (para que serve?)
+
+
+Sprint devs:
+	Alteração no layout
+		Alterar as cores para ficarem mais visiveis e melhores na divisão
+		Alterar disposição dos elementos (deixar centralizado) e deixar responsivo para diferentes resoluções
+		Alterar tópicos do site abaixo para quando clicados, abrirem um modal e nao redirecionar como é feito hoje.
+		Colocar título na página como "Noticias", "Blog", etc
+		Ter uma opção de contato em toda página (porque é o objetivo da página)
+		Alterar o css para ter menos animações ou animações menores.
+		Alterar no html as informações passadas. Colocar mais informações e a última data de atualização.
