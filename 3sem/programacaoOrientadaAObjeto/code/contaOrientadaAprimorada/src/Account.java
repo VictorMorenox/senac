@@ -5,9 +5,8 @@ public class Account {
   private double saldo;
   private String cpf;
 
-  public Account(String cpf, int numero) {
+  public Account(int numero) {
     saldo = SALDO_INICIAL;
-    this.cpf = cpf;
     this.numero = numero;
   }
 
@@ -28,11 +27,19 @@ public class Account {
     return numero;
   }
 
+  public void setNumero(int numero) {
+    this.numero = numero;
+  }
+
   public double getSaldo() {
     return saldo;
   }
 
   public String getCpf() {
     return cpf;
+  }
+
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
   }
 }

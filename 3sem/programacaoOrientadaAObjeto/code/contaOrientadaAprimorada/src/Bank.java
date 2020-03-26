@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Bank {
   private static int numTotalContas = 4;
@@ -10,22 +11,27 @@ public class Bank {
   private Account[] accounts;
   private ArrayList<Logger> log = new ArrayList<Logger>();
   private Logger logRegister;
+  Scanner sc = new Scanner(System.in);
 
   public Bank(String nome) {
     this.nome = nome;
     codigo = 1;
     customers = new Customer[numTotalContas];
     accounts = new Account[numTotalContas];
-
   }
 
   public boolean register() {
     try {
+      Account account = new Account(codigo);
+      accounts[indexAccount(codigo)] = account;
+
       Customer customer = new Customer();
       customer.register(codigo);
       customers[indexAccount(codigo)] = customer;
-      Account account = new Account(customer.getCpf(), codigo);
-      accounts[indexAccount(codigo)] = account;
+      String cpfTitular = customers[indexAccount(codigo)].getCpf();
+
+      accounts[indexAccount(codigo)].setCpf(cpfTitular);
+
       codigo++;
       logRegister = new Logger(returnLastLogId(), "create", "success", "O cliente de CPF " + customer.getCpf() +
         " foi criado vinculado a conta de numero " + account.getNumero());
@@ -44,6 +50,7 @@ public class Bank {
   }
 
   public boolean withdraw(int accountNumber, double value) {
+
     if (accounts[indexAccount(accountNumber)].subtract(value)) {
       logRegister = new Logger(returnLastLogId(), "withdraw", "success", "Foi sacado um valor de " + value + " da" +
         "conta " + accountNumber);

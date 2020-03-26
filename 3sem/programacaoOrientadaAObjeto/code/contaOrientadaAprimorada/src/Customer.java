@@ -4,7 +4,7 @@ public class Customer {
 
   private String nome;
   private String cpf;
-  private int numero;
+  private Account conta;
 
   public void register(int numero) {
     Scanner sc = new Scanner(System.in);
@@ -12,7 +12,6 @@ public class Customer {
     nome = sc.nextLine();
     System.out.println("Qual o seu CPF?");
     cpf = sc.nextLine();
-    this.numero = numero;
   }
 
   public String getCpf() {
