@@ -8,7 +8,7 @@ public class BancoDeDados {
     static private int ultimaPessoa = 0;
 
     public static void main(String[] args) {
-        String nomeTemp, cpfTemp, ruaTemp, cepTemp, cidadeTemp, crmTemp, especialidadeTemp;
+        String nomeTemp, cpfTemp, ruaTemp, cepTemp, cidadeTemp, crmTemp, especialidadeTemp, departamentoTemp, ramalTemp;
 
         int opcao;
 
@@ -17,8 +17,9 @@ public class BancoDeDados {
             System.out.println("1. Cadastrar uma pessoa comum;");
             System.out.println("2. Cadastrar um medico;");
             System.out.println("3. Cadastrar um paciente;");
-            System.out.println("4. Listar dados de uma pessoa específica;");
-            System.out.println("5. Listar dados de todas as pessoas;");
+            System.out.println("4. Cadastrar uma secretaria;");
+            System.out.println("5. Listar dados de uma pessoa específica;");
+            System.out.println("6. Listar dados de todas as pessoas;");
             System.out.println("Digite qualquer outra opcao para sair.");
 
             opcao = sc.nextInt();
@@ -61,10 +62,23 @@ public class BancoDeDados {
                     adicionaPessoa(paciente);
                     break;
                 case 4:
+                    System.out.println("Otimo, vamos cadastrar uma SECRETARIA. Para comecar, precisamos saber algumas " +
+                            "informacoes sobre ela.");
+                    nomeTemp = pergunte("Qual o Nome?");
+                    cpfTemp = pergunte("Qual o CPF?");
+                    ruaTemp = pergunte("Qual a rua?");
+                    cepTemp = pergunte("Qual o CEP?");
+                    cidadeTemp = pergunte("Qual a cidade?");
+                    departamentoTemp = pergunte("Qual o departamento?");
+                    ramalTemp = pergunte("Qual o ramal?");
+                    Pessoa secretaria = new Secretaria(nomeTemp, cpfTemp, new Endereco(ruaTemp, cepTemp, cidadeTemp), departamentoTemp, ramalTemp);
+                    adicionaPessoa(secretaria);
+                    break;
+                case 5:
                     cpfTemp = pergunte("Qual o CPF da pessoa?");
                     retornaPessoaEspecifica(cpfTemp);
                     break;
-                case 5:
+                case 6:
                     retornaTodasPessoas();
                     break;
                 default:
@@ -115,16 +129,18 @@ public class BancoDeDados {
         }
     }
 
-    static private String retornaTipo(Pessoa temp) { // arrumar
-        if (temp instanceof Pessoa) {
-            return "Tipo: Pessoa";
-        }
+    static private String retornaTipo(Pessoa temp) {
         if (temp instanceof Medico) {
             return "Tipo: Medico";
         }
+
         if (temp instanceof Paciente) {
             return "Tipo: Paciente";
         }
-        return "Nao encontrado";
+
+        if (temp instanceof Secretaria) {
+            return "Tipo: Secretaria";
+        }
+        return "Tipo: P1essoa";
     }
 }
