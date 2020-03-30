@@ -1,0 +1,30 @@
+Cisc
+Complex Instruction Set Computer
+	Computador com um conjunto complexo de instrucoes
+	Muitas instruções, instruções executadas por microcódigo, instruçoes com diversos formatos, instruções utilizxam multiplos ciclos de máquimna, diversos enderecamentos, poucos registradores, pouco uso de pipelining
+
+	Complexo pois existem muitras instruções
+
+
+Risc
+Reduced Instruction Set Computer
+	Computador com um conjunto reduzido de instrucoes
+	Poucas instrucoes, executados pelo hardware, formato fixo, poucos ciclos de máquina, poucos modos de endereçamento, muitos registradores, pipelining.
+
+
+Toda instrução é executada no hardware
+
+o pipieline eh criado em estagios, tem uma definicao que cada estagio tenha o msm tamanho, um ciclo de clock, etc
+
+
+ele veio primeiro na risc pq toda instrucao tem o mesmo tamanho, entao encaixa perfeito
+
+no Cisc, como sao diferentes, o estagio do pipeline eh criado com base no maior tamanho, pq se passa o maior, passa o menor.
+
+
+
+Risc
+tem mais registradores pq usam mais
+os registradores ficam na CPU
+
+Risc --> armazenamento (servidores, etc)
