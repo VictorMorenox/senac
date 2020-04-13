@@ -1,0 +1,37 @@
+Hierarquia de memória
+
+Custo // Velocidade // Capacidade
+
+
+
+Tipos de memoria
+
+	Registrador -> a memoria mais rapida que o pc tem
+
+	Memoria ROM/EPROM -> eh uma memoria lenta e tem pouca quantidade no pc
+
+	Memoria cache -> 
+
+	Memoria principal -> memoria ram
+
+	Memoria secundaria -> memoria em grande quantidade, lenta e nao volatil (qnd o pc nao ta energizado, o dado nao eh perdido)
+
+Memoria sao areas de armazenamento e um computador trabalha com 3 tipos basicos de memoria
+	MEMORIA RAM
+		SRAM -> estatica
+		DRAM -> dinamica
+
+		Memoria de acesso aleatorio (random acess memory)
+		
+	MEMORIA ROM (READ ONLY MEMORY)
+		eh uma memoria só de leitura, ela guarda a BIOS
+		a gente consegue alterar a hora e atualizar a bios por causa dos tipos de ROM
+		TIPOS DE ROM
+			MASK-ROM/PROM A MASK-ROM vem gravada de fabricava e a PROM eh uma rom programavel
+			EPROM pode ser apagado com luz ultravioleta e regravado (ersable programavel rom)
+			EEPROM pode ser alterada sem ser apagado
+			FLASH-ROM aqui eh mais rapido mas n pode ser escolhido o lugar do endereco a ser trocado
+
+
+
+	MEMORIA DE MASSA
