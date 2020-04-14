@@ -4,37 +4,42 @@ import java.util.Scanner;
 public class Bank {
   private static int numTotalContas = 4;
   private static int logCount = 1;
-
+  Scanner sc = new Scanner(System.in);
   private String nome;
   private int codigo;
   private Customer[] customers;
   private Account[] accounts;
   private ArrayList<Logger> log = new ArrayList<Logger>();
   private Logger logRegister;
-  Scanner sc = new Scanner(System.in);
-
+  
   public Bank(String nome) {
     this.nome = nome;
     codigo = 1;
     customers = new Customer[numTotalContas];
     accounts = new Account[numTotalContas];
   }
-
-  public boolean register() {
+  
+  public boolean register(String tipoConta) {
     try {
-      Account account = new Account(codigo);
+      Account account;
+      if (tipoConta.equalsIgnoreCase("simples")) {
+        account = new Account(codigo);
+      } else {
+        account = new EspecialAccount(codigo);
+      }
+      
       accounts[indexAccount(codigo)] = account;
-
+      
       Customer customer = new Customer();
       customer.register(codigo);
       customers[indexAccount(codigo)] = customer;
       String cpfTitular = customers[indexAccount(codigo)].getCpf();
-
+      
       accounts[indexAccount(codigo)].setCpf(cpfTitular);
-
+      
       codigo++;
       logRegister = new Logger(returnLastLogId(), "create", "success", "O cliente de CPF " + customer.getCpf() +
-        " foi criado vinculado a conta de numero " + account.getNumero());
+          " foi criado vinculado a conta de numero " + account.getNumero());
       log.add(logRegister);
       return true;
     } catch (Exception ex) {
@@ -44,16 +49,16 @@ public class Bank {
       return false;
     }
   }
-
+  
   public int indexAccount(int numero) {
     return numero - 1;
   }
-
+  
   public boolean withdraw(int accountNumber, double value) {
-
+    
     if (accounts[indexAccount(accountNumber)].subtract(value)) {
       logRegister = new Logger(returnLastLogId(), "withdraw", "success", "Foi sacado um valor de " + value + " da" +
-        "conta " + accountNumber);
+          "conta " + accountNumber);
       log.add(logRegister);
       return true;
     }
@@ -61,20 +66,20 @@ public class Bank {
     log.add(logRegister);
     return false;
   }
-
+  
   public boolean deposit(int accountNumber, double value) {
     accounts[indexAccount(accountNumber)].sum(value);
     logRegister = new Logger(returnLastLogId(), "deposit", "success", "Foi depositado um valor de " + value
-      + " na conta de numero " + accountNumber);
+        + " na conta de numero " + accountNumber);
     log.add(logRegister);
     return true;
   }
-
+  
   public boolean transfer(int mainAccount, int secondAccount, double value) {
     if (accounts[indexAccount(mainAccount)].subtract(value)) {
       accounts[indexAccount(secondAccount)].sum(value);
       logRegister = new Logger(returnLastLogId(), "transfer", "success", "Foi transferido um valor de " + value
-        + " da conta de numero " + mainAccount + " para a conta de numero " + secondAccount);
+          + " da conta de numero " + mainAccount + " para a conta de numero " + secondAccount);
       log.add(logRegister);
       return true;
     }
@@ -82,10 +87,10 @@ public class Bank {
     log.add(logRegister);
     return false;
   }
-
+  
   public void returnAllAccounts() {
     for (Account account :
-      accounts) {
+        accounts) {
       if (account == null) {
         continue;
       }
@@ -96,25 +101,25 @@ public class Bank {
     }
     System.out.println();
   }
-
+  
   public void returnEspecificAccount(int numero) {
     System.out.println("Codigo da conta: " + accounts[indexAccount(numero)].getNumero());
     System.out.println("CPF do titular: " + accounts[indexAccount(numero)].getCpf());
     System.out.println("Saldo da conta: " + accounts[indexAccount(numero)].getSaldo());
     System.out.println();
   }
-
+  
   public String nomeBanco() {
     return nome;
   }
-
+  
   public int lastIdCustomer() {
     return accounts[indexAccount(codigo - 1)].getNumero();
   }
-
+  
   public void returnLog() {
     for (Logger log :
-      log) {
+        log) {
       System.out.println("ID log: " + log.getId());
       System.out.println("type: " + log.getType());
       System.out.println("status: " + log.getStatus());
@@ -125,7 +130,7 @@ public class Bank {
     System.out.println();
     System.out.println();
   }
-
+  
   public int returnLastLogId() {
     if (log == null) {
       return 1;

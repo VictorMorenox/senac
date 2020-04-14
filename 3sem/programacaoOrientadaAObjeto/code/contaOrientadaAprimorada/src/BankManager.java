@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class BankManager {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-
+    
     int mainAccount;
     int secondAccount;
     double value;
-
+    
     System.out.println("Seja bem vindo ao gerenciador de banco!");
     System.out.print("Qual o nome do seu banco? ");
     String bankName = sc.nextLine();
-
+    
     Bank bank = new Bank(bankName);
-
+    
     System.out.println(bankName + " foi uma otima escolha!");
     System.out.println();
-
+    
     int opcao;
     do {
       System.out.println("Escolha o que deseja fazer nos enviando o numero selecionado ou escreva qualquer outro numero para sair");
@@ -31,7 +31,11 @@ public class BankManager {
       sc.nextLine();
       switch (opcao) {
         case 1:
-          if (bank.register()) {
+  
+          System.out.println("Conta [simples] ou [especial]?");
+          String tipoConta = sc.nextLine();
+          
+          if (bank.register(tipoConta)) {
             System.out.println("Cliente cadastrado com sucesso!");
             bank.returnEspecificAccount(bank.lastIdCustomer());
             System.out.println();
