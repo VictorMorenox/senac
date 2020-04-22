@@ -1,0 +1,34 @@
+ ### Conceito ###
+É quando o método usa a anotação @Override para sobreescrever o método
+da superclasse
+
+
+public class Pessoa {
+
+    private String nome;
+
+    public Pessoa(String nome) {
+    this.nome = nome;
+    }
+
+    public void dizOi() {
+    System.out.println("Oi! sou " + nome);
+    }
+
+}
+
+public class Aluno extends Pessoa() {
+
+    private String escola;
+
+    public Aluno(String nome, String escola ) {
+        super(nome);
+        this.escola = escola;
+    }
+
+    @Override <-- não é necessário mas é boa pratica
+    public void apresentar() {
+        super.apresentar();
+        System.out.println("Minha escola eh: " + escola)
+    }
+}

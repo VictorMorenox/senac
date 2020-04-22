@@ -1,0 +1,7 @@
+ ### Conceito ###
+É quando uma variável polimórfica (variável que pode assumir vários tipos dentro dela)
+com um determinado tipo estático referencia objetos de diferentes classes (tipos dinâmicos),
+sendo essas classes especializações do tipo estático da variável
+
+Pessoa p1 = new Pessoa("Jose");
+p1 = new Aluno("Joaozinho", "2 serie"); <----- isso é um polimorfismo

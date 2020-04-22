@@ -1,0 +1,12 @@
+ ### Conceito ###
+Polimorfismo Ad-Hoc de sobrecarga ocorre quando uma classe possui
+métodos com o mesmo nome porém com atributos diferentes (assinaturas)
+(o que é considerado métodos diferentes)
+
+ ### Exemplo ###
+
+ public class PessoaFactory {
+    public Pessoa makePessoa(String nome);
+
+    public Pessoa makePessoa(String nome, String curso);
+ }

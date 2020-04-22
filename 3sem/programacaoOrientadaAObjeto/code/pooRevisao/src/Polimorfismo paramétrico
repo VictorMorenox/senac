@@ -1,0 +1,6 @@
+ ### Conceito ###
+Ocorre quando uma classe pode apresentar comportamentos diferentes de acordo
+com os parametros de classes atribuidos
+
+ ### Exemplo ###
+ Arraylist<String> <--- Isso define o comportamento da classe

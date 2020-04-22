@@ -1,0 +1,32 @@
+ ### Conceito ###
+Heranca é uma propriedade das classes (subclasses ou classes filhas) que especializam
+uma classe mais generica (classe mae ou super) pois acabam por herdar seus metodos
+e atributos.
+
+
+ ### Exemplo ###
+
+public class Pessoa {
+
+    private String nome;
+
+    public Pessoa(String nome) {
+    this.nome = nome;
+    }
+
+    public void dizOi() {
+    System.out.println("Oi! sou " + nome);
+    }
+
+}
+
+public class Aluno extends Pessoa() {
+
+    private String escola;
+
+    public Aluno(String nome, String escola ) {
+    super(nome);
+    this.escola = escola;
+
+    }
+}

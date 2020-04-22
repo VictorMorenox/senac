@@ -1,0 +1,28 @@
+ ### Conceito ###
+Encapsulamento é a propriedade das linguagens orientadas a objeto
+que permite que as variáveis e as tarefas que as utilizam estejam
+encapsuladas dentro da classe.
+
+
+Prog estruturada:
+    double equacao2grau(double a, double b, double c, double x) {
+    return a * x * x + b * x + c;
+    }
+
+
+Prog orientada objeto
+
+public class Equacao2Grau {
+    private double a, b, c;
+
+    public Equacao2Grau(double a, double b, double c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+    }
+
+    public double calcular(double x) {
+        return (a * x * x) + (b * x) + c;
+    }
+
+}
